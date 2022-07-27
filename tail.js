@@ -1,9 +1,11 @@
+// Return the tail for an array
 const tail = function(array) {
   let newArray = array.slice(1);
   return newArray;
 };
 
 
+// Check if two values are equal
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
