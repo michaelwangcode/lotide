@@ -4,6 +4,9 @@ const assertEqual = require('../assertEqual');
 // Import the eqObjects function
 const eqObjects = require('../eqObjects');
 
+// Import the eqArrays function
+const eqArrays = require('../eqArrays');
+
 
 
 // Test code for eqObjects.js

@@ -49,6 +49,5 @@ let eqArrays = function(array1, array2) {
 };
 
 
-
 // Export the eqArrays function
 module.exports = eqArrays;
