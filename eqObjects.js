@@ -38,6 +38,16 @@ let eqArrays = function(array1, array2) {
 // Uses recursion to handle nested objects
 let eqObjects = function(object1, object2) {
 
+  // If either argument is an array, return false
+  if (Array.isArray(object1) || Array.isArray(object2)) {
+    return false;
+  }
+
+  // If either argument is not an object, return false
+  if (typeof object1 !== 'object' || typeof object2 !== 'object') {
+    return false;
+  }
+
   // If the objects have a different number of keys, return false
   if (Object.keys(object1).length !== Object.keys(object2).length) {
     return false;
@@ -45,20 +55,24 @@ let eqObjects = function(object1, object2) {
 
   // Iterate through the keys 
   for (let key in object1) {
-    // If the values for both objects are arrays
+
+    // If the values for both objects are arrays but not equal,
     if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
+
       // If the arrays are not equal, return false
       if (!eqArrays(object1[key], object2[key])) {
         return false;
       }
     // If both values are objects
     } else if (typeof object1[key] === 'object' && typeof object2[key] === 'object') {
+      
       // Compare the objects using recursion
       if (!eqObjects(object1[key], object2[key])) {
         return false;
       }
     // Otherwise, compare the two values
     } else {
+      
       // If the values are not equal, return false
       if (object1[key] !== object2[key]) {
         return false;
@@ -68,7 +82,6 @@ let eqObjects = function(object1, object2) {
 
   return true;
 }
-
 
 
 
@@ -103,7 +116,15 @@ const object3 = {a: "1", b: {e: {e: "4", f: "4"}}, c: "3", d: {e: "4"}};
 const object4 = {a: "1", b: {e: {e: "4", f: "4"}}, c: "3", d: {e: "4"}};
 assertEqual(eqObjects(object3, object4), true);
 
+
 const object5 = {a: "1", b: [{e: {e: "4", f: "4"}}], c: "3", d: {e: "4"}};
 const object6 = {a: "1", b: {e: {e: "4", f: "4"}}, c: "3", d: {e: "4"}};
 assertEqual(eqObjects(object5, object6), false);
 
+
+assertEqual(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), true) // => true
+assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), false) // => false
+assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 }), false) // => false
+
+assertEqual(eqObjects(1,2), false);
+assertEqual(eqObjects([1],[1]), false);
