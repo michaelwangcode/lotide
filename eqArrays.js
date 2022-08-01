@@ -27,7 +27,7 @@ let eqObjects = function(object1, object2) {
     return false;
   }
 
-  // Iterate through the keys 
+  // Iterate through the keys
   for (let key in object1) {
 
     // If both values are arrays,
@@ -46,12 +46,12 @@ let eqObjects = function(object1, object2) {
       }
     // Otherwise, compare the two values using !==
     } else if (object1[key] !== object2[key]) {
-        return false;
+      return false;
     }
   }
 
   return true;
-}
+};
 
 
 
@@ -71,7 +71,7 @@ let eqArrays = function(array1, array2) {
   // If both arrays are of different sizes, return false
   if (array1.length !== array2.length) {
     return false;
-  } 
+  }
 
   // Iterate and compare each element
   for (let i = 0; i < array1.length; i++) {

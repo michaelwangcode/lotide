@@ -25,7 +25,7 @@ let eqArrays = function(array1, array2) {
   // If both arrays are of different sizes, return false
   if (array1.length !== array2.length) {
     return false;
-  } 
+  }
 
   // Iterate and compare each element
   for (let i = 0; i < array1.length; i++) {
@@ -76,7 +76,7 @@ let eqObjects = function(object1, object2) {
     return false;
   }
 
-  // Iterate through the keys 
+  // Iterate through the keys
   for (let key in object1) {
 
     // If both values are arrays,
@@ -95,13 +95,12 @@ let eqObjects = function(object1, object2) {
       }
     // Otherwise, compare the two values using !==
     } else if (object1[key] !== object2[key]) {
-        return false;
+      return false;
     }
   }
 
   return true;
-}
-
+};
 
 
 
@@ -141,9 +140,9 @@ const object6 = {a: "1", b: {e: {e: "4", f: "4"}}, c: "3", d: {e: "4"}};
 assertEqual(eqObjects(object5, object6), false);
 
 
-assertEqual(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), true) // => true
-assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), false) // => false
-assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 }), false) // => false
+assertEqual(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), true); // => true
+assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), false); // => false
+assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 }), false); // => false
 
 assertEqual(eqObjects(1,2), false);
 assertEqual(eqObjects([1],[1]), false);
