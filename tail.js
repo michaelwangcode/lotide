@@ -1,28 +1,8 @@
-// Return the tail for an array
+// Return the tail of an array
 const tail = function(array) {
   let newArray = array.slice(1);
   return newArray;
 };
 
-
-// Check if two values are equal
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`❌ Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
-
-let originalArray = ["Hello", "Lighthouse", "Labs"];
-let tailArray = tail(originalArray);
-
-console.log(originalArray);
-console.log(tailArray);
-
-let originalArray2 = ["Hello"];
-let tailArray2 = tail(originalArray2);
-
-console.log(originalArray2);
-console.log(tailArray2);
+// Export the tail function
+module.exports = tail;
