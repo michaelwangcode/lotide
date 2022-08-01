@@ -56,27 +56,23 @@ let eqObjects = function(object1, object2) {
   // Iterate through the keys 
   for (let key in object1) {
 
-    // If the values for both objects are arrays but not equal,
+    // If both values are arrays,
     if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
 
       // If the arrays are not equal, return false
       if (!eqArrays(object1[key], object2[key])) {
         return false;
       }
-    // If both values are objects
+    // If both values are objects,
     } else if (typeof object1[key] === 'object' && typeof object2[key] === 'object') {
       
       // Compare the objects using recursion
       if (!eqObjects(object1[key], object2[key])) {
         return false;
       }
-    // Otherwise, compare the two values
-    } else {
-      
-      // If the values are not equal, return false
-      if (object1[key] !== object2[key]) {
+    // Otherwise, compare the two values using !==
+    } else if (object1[key] !== object2[key]) {
         return false;
-      }
     }
   }
 
@@ -106,7 +102,7 @@ assertEqual(eqObjects(cd, cd2), false); // => false
 
 
 
-// Testing recursion with nested objects
+// Testing nested objects with recursion
 const object1 = {a: "1", b: "2", c: "3", d: {e: "4"}};
 const object2 = {a: "1", b: "2", c: "3", d: {e: "4"}};
 assertEqual(eqObjects(object1, object2), true);
