@@ -25,7 +25,7 @@ describe("#head", () => {
   });
 
   it("returns [1] for [[1]]", () => {
-    assert.equal(head([[1]]), 1);
+    assert.deepEqual(head([[1]]), [1]);
   });
 
   it("returns undefined for []", () => {
