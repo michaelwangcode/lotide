@@ -8,7 +8,7 @@ const assertEqual = function(actual, expected) {
 };
 
 
-// This function counts how many times a name appears in a list
+// This function counts how many times a name appears in an array
 // allItems: an array of strings that we need to look through
 // itemsToCount: an object specifying what to count
 const countOnly = function(allItems, itemsToCount) {

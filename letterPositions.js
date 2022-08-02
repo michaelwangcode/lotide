@@ -35,7 +35,7 @@ const assertArraysEqual = function(actual, expected) {
 
 
 
-// Given a string, return all the indices where a string is found
+// Given a string, return all the indices where a letter is found
 const letterPositions = function(sentence) {
   const results = {};
   

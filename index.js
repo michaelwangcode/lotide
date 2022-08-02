@@ -3,7 +3,7 @@ const assertArraysEqual = require('./assertArraysEqual');
 const assertEqual = require('./assertEqual');
 const assertObjectsEqual = require('./assertObjectsEqual');
 const countLetters = require('./countLetters');
-const countonly = require('./countonly');
+const countOnly = require('./countonly');
 const eqArrays = require('./eqArrays');
 const eqObjects = require('./eqObjects');
 const findKey = require('./findKey');
@@ -25,7 +25,7 @@ module.exports = {
   assertEqual,
   assertObjectsEqual,
   countLetters,
-  countonly,
+  countOnly,
   eqArrays,
   eqObjects,
   findKey,

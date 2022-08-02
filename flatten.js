@@ -1,3 +1,4 @@
+// Flatten an array so there are no nested arrays
 const flatten = function (array) {
 
   let newArray = [];
@@ -17,3 +18,4 @@ const flatten = function (array) {
 
 
 console.log(flatten([1, 2, [3, 4], 5, [6]])) // => [1, 2, 3, 4, 5, 6]
+console.log(flatten([1, 2, [3, [4]], 5, [6]])) // => [1, 2, 3, 4, 5, 6]

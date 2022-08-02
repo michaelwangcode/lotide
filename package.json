@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@michaelwangcode/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "A clone of the Lodash library created for educational purposes",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,9 @@
     "type": "git",
     "url": "git+https://github.com/michaelwangcode/lotide.git"
   },
-  "author": "",
+  "author": {
+    "name" : "Michael Wang"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/michaelwangcode/lotide/issues"

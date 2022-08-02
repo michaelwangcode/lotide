@@ -33,7 +33,7 @@ const assertArraysEqual = function(actual, expected) {
 };
 
 
-// Removes uneanted items from an array
+// Removes unwanted items from an array
 const without = function(source, itemsToRemove) {
 
   let newArray = [];
