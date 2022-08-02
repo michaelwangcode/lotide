@@ -21,21 +21,21 @@ const without = require('./without');
 
 // Export all of the Lotide functions
 module.exports = {
-  assertArraysEqual: assertArraysEqual,
-  assertEqual: assertEqual,
-  assertObjectsEqual: assertObjectsEqual,
-  countLetters: countLetters,
-  countonly: countonly,
-  eqArrays: eqArrays,
-  eqObjects: eqObjects,
-  findKey: findKey,
-  findKeyByValue: findKeyByValue,
-  flatten: flatten,
-  head: head,
-  letterPositions: letterPositions,
-  map: map,
-  middle: middle,
-  tail: tail,
-  takeUntil: takeUntil,
-  without: without
+  assertArraysEqual,
+  assertEqual,
+  assertObjectsEqual,
+  countLetters,
+  countonly,
+  eqArrays,
+  eqObjects,
+  findKey,
+  findKeyByValue,
+  flatten,
+  head,
+  letterPositions,
+  map,
+  middle,
+  tail,
+  takeUntil,
+  without
 };
