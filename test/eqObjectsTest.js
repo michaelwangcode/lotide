@@ -4,12 +4,9 @@ const assertEqual = require('../assertEqual');
 // Import the eqObjects function
 const eqObjects = require('../eqObjects');
 
-// Import the eqArrays function
-const eqArrays = require('../eqArrays');
 
 
-
-// Test code for eqObjects.js
+// Test statements for eqObjects.js
 
 // Tests for objects with primitive values
 const ab = { a: "1", b: "2" };

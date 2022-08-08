@@ -1,14 +1,12 @@
 // Import Chai
 const assert = require('chai').assert;
 
-// Import the assertArraysEqual function
-const assertArraysEqual = require('../assertArraysEqual');
-
 // Import the middle function
 const middle = require('../middle');
 
 
-// Test code for middle.js
+
+// Test statements for middle.js
 describe("#middle", () => {
 
   it("returns [] for [[1]]", () => {

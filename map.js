@@ -1,48 +1,13 @@
-// Check if two arrays are equal
-let eqArrays = function(array1, array2) {
-
-  // If either input is not an array, return true
-  if (Array.isArray(array1) === false || Array.isArray(array2) === false) {
-    return false;
-  // If both arrays are empty, return true
-  } else if (array1.length === 0 && array2.length === 0) {
-    return true;
-  // If both arrays are of different size, return false
-  } else if (array1.length !== array2.length) {
-    return false;
-  // Otherwise, iterate and compare each element
-  } else {
-    for (let i = 0; i < array1.length; i++) {
-      if (array1[i] !== array2[i]) {
-        return false;
-      }
-    }
-  }
-
-  return true;
-};
-
-
-
-// Prints whether two arrays are equal
-const assertArraysEqual = function(actual, expected) {
-  if (eqArrays(actual, expected)) {
-    console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`❌ Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
-
-// Array of words
-const words = ["ground", "control", "to", "major", "tom"];
-
-// This map function takes an array and a function, and applies the function to every element
+// This function takes an array and a function, and applies the function to every element
 const map = function(array, callback) {
 
+  // Create a new blank array
   const results = [];
 
+  // Iterate through the items in the array
   for (let item of array) {
+
+    // Apply the callback function to each item
     results.push(callback(item));
   }
 
@@ -50,18 +15,6 @@ const map = function(array, callback) {
 };
 
 
-// Return the first letter of every word
-const results1 = map(words, word => word[0]);
 
-// Return the uppercase version of each word
-const results2 = map(words, word => word.toUpperCase());
-
-// Return the uppercase version of each first letter
-const results3 = map(words, word => word[0].toUpperCase());
-
-
-assertArraysEqual(results1, ['g', 'c', 't', 'm', 't'])
-assertArraysEqual(results2, ['GROUND', 'CONTROL', 'TO', 'MAJOR', 'TOM'])
-assertArraysEqual(results3, ['G', 'C', 'T', 'M', 'T'])
-
-
+// Export the map function
+module.exports = map;

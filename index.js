@@ -1,4 +1,4 @@
-// All Lotide functions
+// Import all Lotide functions
 const assertArraysEqual = require('./assertArraysEqual');
 const assertEqual = require('./assertEqual');
 const assertObjectsEqual = require('./assertObjectsEqual');

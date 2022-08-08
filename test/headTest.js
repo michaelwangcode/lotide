@@ -2,10 +2,11 @@
 const assert = require('chai').assert;
 
 // Import the head function
-const head   = require('../head');
+const head  = require('../head');
 
 
-// Test code for head.js
+
+// Test statements for head.js
 describe("#head", () => {
 
   it("returns 1 for [1, 2, 3]", () => {

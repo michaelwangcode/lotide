@@ -1,14 +1,11 @@
-// Import the assertEqual function
-const assertEqual = require('../assertEqual');
-
 // Import the tail function
 const tail = require('../tail');
 
-// Import the eqArrays function
-const eqArrays = require('../eqArrays');
+// Import the assertArraysEqual function
+const assertArraysEqual = require('../assertArraysEqual');
 
 
-// Test code for tail.js
-assertEqual(eqArrays(tail(["Hello", "Lighthouse", "Labs"]), ["Lighthouse", "Labs"]), true);
-assertEqual(eqArrays(tail(["Hello"]), []), true);
 
+// Test statements for tail.js
+assertArraysEqual(tail(["Hello", "Lighthouse", "Labs"]), ["Lighthouse", "Labs"]);
+assertArraysEqual(tail(["Hello"]), []);

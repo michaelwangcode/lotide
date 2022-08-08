@@ -1,5 +1,6 @@
-// Import the eqArrays function - Doesn't work for some reason
+// Import the eqArrays function - Doesn't work for some reason so function is pasted instead
 //const eqArrays = require('./eqArrays');
+
 
 
 // Check if two arrays are equal

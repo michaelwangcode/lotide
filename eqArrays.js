@@ -2,6 +2,7 @@
 const eqObjects = require('./eqObjects');
 
 
+
 // Check if two arrays are equal
 let eqArrays = function(array1, array2) {
 
@@ -47,6 +48,7 @@ let eqArrays = function(array1, array2) {
 
   return true;
 };
+
 
 
 // Export the eqArrays function

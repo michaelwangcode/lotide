@@ -5,7 +5,8 @@ const assertEqual = require('../assertEqual');
 const eqArrays = require('../eqArrays');
 
 
-// Test code for eqArrays.js
+
+// Test statments for eqArrays.js
 
 // Tests for arrays with primitive values
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS

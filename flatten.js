@@ -1,21 +1,28 @@
-// Flatten an array so there are no nested arrays
+// This function flattens an array so there are no nested arrays
 const flatten = function (array) {
 
-  let newArray = [];
+  // Create a new empty array
+  let resultArray = [];
 
+  // Iterate through the array one element at a time
   for (let i = 0; i < array.length; i++) {
+
+    // If an element is a nested array
     if (Array.isArray(array[i])) {
-      for (let j = 0; j < array[i].length; j++) {
-        newArray.push(array[i][j]);
-      }
+
+      // Run the flatten function on the nested array and add it to the result array
+      resultArray = resultArray.concat(flatten(array[i]));
+
+    // Othewise, add the element to the array
     } else {
-      newArray.push(array[i]);
+      resultArray.push(array[i]);
     }
   }
 
-  return newArray;
+  return resultArray;
 }
 
 
-console.log(flatten([1, 2, [3, 4], 5, [6]])) // => [1, 2, 3, 4, 5, 6]
-console.log(flatten([1, 2, [3, [4]], 5, [6]])) // => [1, 2, 3, 4, 5, 6]
+
+// Export the flatten function
+module.exports = flatten;

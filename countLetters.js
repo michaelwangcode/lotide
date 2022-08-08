@@ -1,14 +1,3 @@
-// Check if two values are equal
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`❌ Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
-
-
 // Counts the number of times each letter appears in a string
 const countLetters = function(string) {
 
@@ -32,5 +21,5 @@ const countLetters = function(string) {
 
 
 
-console.log(countLetters("hello world"));
-console.log(countLetters("lighthouse in the house"));
+// Export the countLetters function
+module.exports = countLetters;
