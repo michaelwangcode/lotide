@@ -1,6 +1,16 @@
 # Lotide
 
-A mini clone of the [Lodash](https://lodash.com) library.
+## About 
+
+This is an library of simple functions for arrays and objects in JavaScript.
+
+It is a mini clone of the [Lodash](https://lodash.com) library.
+
+Unit tests for the functions are done using Mocha and Chai.
+
+To run the tests, use `npm install` and `npm test`.
+
+Made during Lighthouse Labs (W01D1).
 
 ## Purpose
 
